@@ -1,0 +1,13 @@
+ind: Service
+apiVersion: v1
+metadata:
+  name: simple-server
+spec:
+  selector:
+    app: simple-server
+  ports:
+  - protocol: TCP
+    port: 443
+    name: https
+    targetPort: 8080
+  type: LoadBalancer
